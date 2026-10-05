@@ -1,6 +1,26 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import FadeInSection from "../ui/FadeInSection";
 
+
 export default function Conferencistas() {
+  // Lista de imágenes para el carrusel
+  const carruselImagenes = [
+    "/images/danna-neira-2.webp",
+    "/images/danna-neira-3.webp", // Cambia esto por tus imágenes reales
+    "/images/danna-neira-4.webp"
+  ];
+
+  const [currentImg, setCurrentImg] = useState(0);
+
+  // Cambiar imagen cada 4 segundos
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % carruselImagenes.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-24 md:py-32 px-4 bg-[#050505] text-white font-sans relative overflow-hidden border-t border-gray-900/50">
       
@@ -35,7 +55,7 @@ export default function Conferencistas() {
             <FadeInSection>
               <div className="relative aspect-4/5 rounded-2xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(230,185,129,0.05)] group">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/images/danna-neira-1.webp"  
                   alt="Danna Neira Retrato" 
                   className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700"
                 />
@@ -97,16 +117,26 @@ export default function Conferencistas() {
             </FadeInSection>
           </div>
 
-          {/* Imagen 2 (Derecha) */}
+          {/* Imagen 2 (Derecha - Ahora como Carrusel) */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             <FadeInSection>
-              <div className="relative aspect-4/5 rounded-2xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(230,185,129,0.05)] group">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Danna Neira en Tarima" 
-                  className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent opacity-80"></div>
+              <div className="relative aspect-4/5 rounded-2xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(230,185,129,0.05)] group bg-[#050505]">
+                
+                <AnimatePresence>
+                  <motion.img 
+                    key={currentImg}
+                    src={carruselImagenes[currentImg]}
+                    alt="Danna Neira en Tarima"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }} // Duración del degradado
+                    className="absolute inset-0 w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700"
+                  />
+                </AnimatePresence>
+
+                {/* Sombra de degradado estática encima de las imágenes */}
+                <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
               </div>
             </FadeInSection>
           </div>

@@ -21,7 +21,7 @@ export default function Inversion() {
           <FadeInSection delay={0.1}>
             <div className="bg-[#0a0a0a] border border-gray-800 rounded-xl p-8 hover:border-gray-600 transition-all duration-300 flex flex-col h-full shadow-lg">
               
-              <div className="text-center mb-8">
+              <div className="text-center mb-6">
                 <span className="text-[10px] text-[#e6b981] font-semibold uppercase tracking-widest bg-[#e6b981]/10 border border-[#e6b981]/30 px-4 py-1.5 rounded-full inline-block mb-6">
                   2x1 · Plazas limitadas
                 </span>
@@ -29,9 +29,18 @@ export default function Inversion() {
                   General
                 </h3>
               </div>
+
+              {/* IMAGEN DE LA ENTRADA / MAPA */}
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
+                <img 
+                  src="/images/ent-general.webp" 
+                  alt="Ubicación Platino" 
+                  className="w-full h-full object-contain p-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
               
               <div className="text-center mb-8 pb-8 border-b border-gray-800/80">
-                <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento grande</p>
+                <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento</p>
                 <div className="flex flex-col items-center justify-center gap-1">
                   <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white">$200.000</p>
                   <p className="text-sm text-gray-500 line-through">Luego sube a $350.000</p>
@@ -55,19 +64,27 @@ export default function Inversion() {
           <FadeInSection delay={0.2}>
             <div className="bg-[#0a0a0a] border border-[#e6b981] rounded-xl p-8 transform lg:-translate-y-4 shadow-[0_0_40px_rgba(230,185,129,0.1)] hover:shadow-[0_0_60px_rgba(230,185,129,0.2)] transition-all duration-300 flex flex-col h-full relative z-10">
               
-              {/* CINTA "MÁS POPULAR" */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#e6b981] text-black text-[10px] font-black uppercase py-1.5 px-6 rounded-full tracking-widest shadow-xl whitespace-nowrap">
                 Más popular en preventa
               </div>
               
-              <div className="text-center mb-8 mt-4">
+              <div className="text-center mb-6 mt-4">
                 <h3 className="font-['Oswald',sans-serif] text-5xl font-bold uppercase tracking-tight text-[#e6b981] drop-shadow-md">
                   VIP
                 </h3>
               </div>
+
+              {/* IMAGEN DE LA ENTRADA / MAPA */}
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
+                <img 
+                  src="/images/ent-vip.webp" 
+                  alt="Ubicación Platino" 
+                  className="w-full h-full object-contain p-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
               
               <div className="text-center mb-8 pb-8 border-b border-[#e6b981]/30">
-                <p className="text-[#e6b981]/80 text-xs uppercase tracking-widest mb-2">Precio de lanzamiento grande</p>
+                <p className="text-[#e6b981]/80 text-xs uppercase tracking-widest mb-2">Precio de lanzamiento</p>
                 <div className="flex flex-col items-center justify-center gap-1">
                   <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white drop-shadow-lg">$350.000</p>
                   <p className="text-sm text-[#e6b981]/60 line-through">Luego sube a $450.000</p>
@@ -94,7 +111,7 @@ export default function Inversion() {
           <FadeInSection delay={0.3}>
             <div className="bg-[#0a0a0a] border border-gray-800 rounded-xl p-8 hover:border-gray-500 transition-all duration-300 flex flex-col h-full shadow-lg relative">
               
-              <div className="text-center mb-8">
+              <div className="text-center mb-6">
                 <span className="text-[10px] text-white font-semibold uppercase tracking-widest bg-red-900/50 border border-red-800/50 px-4 py-1.5 rounded-full inline-block mb-6">
                   Solo 15 cupos - no incluye 2x1
                 </span>
@@ -102,9 +119,18 @@ export default function Inversion() {
                   Platino
                 </h3>
               </div>
+
+              {/* IMAGEN DE LA ENTRADA / MAPA */}
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
+                <img 
+                  src="/images/ent-platino.webp" 
+                  alt="Ubicación Platino" 
+                  className="w-full h-full object-contain p-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
+                />
+              </div>
               
               <div className="text-center mb-8 pb-8 border-b border-gray-800/80">
-                <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento grande</p>
+                <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento</p>
                 <div className="flex flex-col items-center justify-center gap-1">
                   <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white">$550.000</p>
                   <p className="text-sm text-gray-500 line-through">Luego $750.000</p>
@@ -112,7 +138,6 @@ export default function Inversion() {
               </div>
               
               <div className="grow">
-                {/* SECCIÓN DURANTE */}
                 <ul className="space-y-4 mb-8 text-sm text-gray-300">
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Zona preferencial plazas únicas una experiencia premium</span></li>
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Ingreso Privilegiado</span></li>
@@ -123,7 +148,6 @@ export default function Inversion() {
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Kit vivencial especial EXPANDE</span></li>
                 </ul>
 
-                {/* SECCIÓN POST EXPANDE */}
                 <h4 className="text-[11px] text-[#e6b981] font-bold uppercase tracking-widest mb-4 border-t border-gray-800/80 pt-6">
                   Post EXPANDE tienes acceso a:
                 </h4>
@@ -146,9 +170,6 @@ export default function Inversion() {
   );
 }
 
-/* =========================================
-   ÍCONO SVG REUTILIZABLE (Estilo Dorado Único)
-   ========================================= */
 const IconCheckGold = () => (
   <svg className="w-5 h-5 text-[#e6b981] shrink-0 mt-0.5 drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

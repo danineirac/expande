@@ -1,7 +1,6 @@
 import FadeInSection from "../ui/FadeInSection";
 
 export default function Experiencia() {
-  // Textos extraídos del documento del cliente
   const mananaList = [
     "Reconoce las heridas y patrones que siguen influyendo en tu vida.",
     "Eleva tu nivel de conciencia y transforma la forma en la que percibes tu realidad.",
@@ -33,9 +32,6 @@ export default function Experiencia() {
     <section className="bg-[#050505] py-24 px-4 font-sans relative">
       <div className="max-w-6xl mx-auto">
         
-        {/* =========================================
-            ENCABEZADO
-            ========================================= */}
         <FadeInSection>
           <div className="text-center mb-16">
             <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm block mb-4">
@@ -47,12 +43,9 @@ export default function Experiencia() {
           </div>
         </FadeInSection>
 
-        {/* =========================================
-            DÍA 1: MAÑANA Y TARDE
-            ========================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12">
           
-          {/* MAÑANA */}
+          {/* ================= MAÑANA ================= */}
           <FadeInSection delay={0.1}>
             <div className="bg-[#0a0a0a] border border-gray-800 rounded-xl p-8 md:p-10 h-full flex flex-col hover:border-[#e6b981]/30 transition-all">
               <div className="mb-8 border-b border-gray-800/80 pb-6">
@@ -68,15 +61,28 @@ export default function Experiencia() {
                 </p>
               </div>
 
-              <ul className="space-y-4 grow">
+              <ul className="space-y-4 grow mb-8">
                 {mananaList.map((item, index) => (
                   <ListItem key={index}>{item}</ListItem>
                 ))}
               </ul>
+
+              {/* GALERÍA MAÑANA (3 Fotos) */}
+              <div className="mt-auto pt-6 border-t border-gray-800/50 grid grid-cols-2 gap-3">
+                <div className="col-span-2 aspect-21/9 rounded-lg overflow-hidden border border-gray-800/50 group/img bg-gray-900">
+                  <img src="/images/manana-11.JPG" alt="Jornada Mañana" className="w-full h-full object-cover grayscale-30 opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-500" />
+                </div>
+                <div className="aspect-video rounded-lg overflow-hidden border border-gray-800/50 group/img bg-gray-900">
+                  <img src="/images/manana-2.webp" alt="Jornada Mañana" className="w-full h-full object-cover grayscale-30 opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-500" />
+                </div>
+                <div className="aspect-video rounded-lg overflow-hidden border border-gray-800/50 group/img bg-gray-900">
+                  <img src="/images/manana-3.webp" alt="Jornada Mañana" className="w-full h-full object-cover grayscale-30 opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-500" />
+                </div>
+              </div>
             </div>
           </FadeInSection>
 
-          {/* TARDE */}
+          {/* ================= TARDE ================= */}
           <FadeInSection delay={0.2}>
             <div className="bg-[#0a0a0a] border border-gray-800 rounded-xl p-8 md:p-10 h-full flex flex-col hover:border-[#e6b981]/30 transition-all">
               <div className="mb-8 border-b border-gray-800/80 pb-6">
@@ -92,17 +98,26 @@ export default function Experiencia() {
                 </p>
               </div>
 
-              <ul className="space-y-4 grow">
+              <ul className="space-y-4 grow mb-8">
                 {tardeList.map((item, index) => (
                   <ListItem key={index}>{item}</ListItem>
                 ))}
               </ul>
+
+              {/* GALERÍA TARDE (2 Fotos) */}
+              <div className="mt-auto pt-6 border-t border-gray-800/50 grid grid-cols-2 gap-3">
+                <div className="aspect-square md:aspect-4/5 rounded-lg overflow-hidden border border-gray-800/50 group/img bg-gray-900">
+                  <img src="/images/tarde-1.webp" alt="Jornada Tarde" className="w-full h-full object-cover grayscale-30 opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-500" />
+                </div>
+                <div className="aspect-square md:aspect-4/5 rounded-lg overflow-hidden border border-gray-800/50 group/img bg-gray-900">
+                  <img src="/images/tarde-2.jpg" alt="Jornada Tarde" className="w-full h-full object-cover grayscale-30 opacity-80 group-hover/img:grayscale-0 group-hover/img:opacity-100 group-hover/img:scale-105 transition-all duration-500" />
+                </div>
+              </div>
             </div>
           </FadeInSection>
 
         </div>
 
-        {/* FRASE INTERMEDIA DE TRANSICIÓN */}
         <FadeInSection delay={0.3}>
           <div className="max-w-3xl mx-auto text-center py-8 mb-12 border-y border-gray-800/50">
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
@@ -111,15 +126,9 @@ export default function Experiencia() {
           </div>
         </FadeInSection>
 
-        {/* =========================================
-            DÍA 2: LUNES (PLATINO / INNER CIRCLE)
-            ========================================= */}
         <FadeInSection delay={0.4}>
           <div className="max-w-4xl mx-auto bg-linear-to-br from-[#110e0a] to-[#050505] border border-[#e6b981]/40 rounded-xl p-8 md:p-12 mb-20 shadow-[0_0_40px_rgba(230,185,129,0.05)] relative overflow-hidden">
-            
-            {/* Cinta superior decorativa */}
             <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-[#e6b981]/20 via-[#e6b981] to-[#e6b981]/20"></div>
-
             <div className="text-center mb-10">
               <span className="bg-[#e6b981]/10 text-[#e6b981] text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full font-bold mb-4 inline-block border border-[#e6b981]/30">
                 Día 2 · Lunes
@@ -131,7 +140,6 @@ export default function Experiencia() {
                 Para Entradas Platino e Inner Circle
               </p>
             </div>
-
             <div className="max-w-2xl mx-auto">
               <ul className="space-y-4">
                 {dia2List.map((item, index) => (
@@ -145,9 +153,6 @@ export default function Experiencia() {
           </div>
         </FadeInSection>
 
-        {/* =========================================
-            TEXTO DE CIERRE DE LA SECCIÓN
-            ========================================= */}
         <FadeInSection delay={0.5}>
           <div className="text-center max-w-4xl mx-auto">
             <h4 className="font-['Oswald',sans-serif] text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter leading-[1.1] mb-6">
@@ -165,9 +170,6 @@ export default function Experiencia() {
   );
 }
 
-/* =========================================
-   COMPONENTE HIJO: LIST ITEM SIMPLE
-   ========================================= */
 const ListItem = ({ children }) => (
   <li className="flex gap-4 items-start group">
     <svg className="w-5 h-5 text-[#e6b981]/70 shrink-0 mt-0.5 group-hover:text-[#e6b981] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">

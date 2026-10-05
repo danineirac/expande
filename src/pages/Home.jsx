@@ -10,6 +10,7 @@ import Footer from "../components/layout/Footer";
 import Maarque from "../components/sections/Marquee";
 import VideoSection from "../components/sections/VideoSection";
 import AntesDespues from "../components/sections/AntesDespues";
+import Testimonios from "../components/sections/Testimonios";
 
 export default function Home() {
   return (
@@ -17,15 +18,14 @@ export default function Home() {
       <Hero />
       <Maarque />
       <VideoSection />
+      <Prueba />
+      <Testimonios />
       <AntesDespues />
       <Experiencia />
       <Ubicacion />
       <Inversion />
       <Conferencistas />
       <FAQ />
-      <Prueba />
-      
-      
       <CierreCTA />
       <Footer />
     </div>
