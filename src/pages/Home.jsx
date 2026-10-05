@@ -7,18 +7,25 @@ import Conferencistas from "../components/sections/Conferencista";
 import FAQ from "../components/sections/FAQ";
 import CierreCTA from "../components/sections/CierreCTA";
 import Footer from "../components/layout/Footer";
+import Maarque from "../components/sections/Marquee";
+import VideoSection from "../components/sections/VideoSection";
+import AntesDespues from "../components/sections/AntesDespues";
 
 export default function Home() {
   return (
     <div className="font-sans selection:bg-orange-500 selection:text-white bg-slate-950 min-h-screen">
       <Hero />
-      {/* <Estadisticas /> */}
-      <Inversion />
-      <Ubicacion />
+      <Maarque />
+      <VideoSection />
+      <AntesDespues />
       <Experiencia />
-      <Prueba />
+      <Ubicacion />
+      <Inversion />
       <Conferencistas />
       <FAQ />
+      <Prueba />
+      
+      
       <CierreCTA />
       <Footer />
     </div>

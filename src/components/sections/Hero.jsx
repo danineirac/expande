@@ -1,101 +1,119 @@
-import FadeInSection from "../ui/FadeInSection";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
-  return (
-    <section className="bg-[#050505] text-white pt-4 pb-16 min-h-screen flex flex-col items-center font-sans">
+  // Estado para el contador hacia el 29 de Noviembre de 2026
+  const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+
+  useEffect(() => {
+    const targetDate = new Date("2026-11-29T08:00:00").getTime();
+    
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
       
-      <FadeInSection>
-        <div className="max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
-          
-          {/* TOP TEXT */}
-          <div className="bg-[linear-gradient(92deg,#F8CE5A,#F08000,#E0400A)] bg-clip-text text-transparent text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] mb-1">
-            La Cumbre vuelve · Medellín · 31 de octubre y 1 de noviembre
+      if (difference > 0) {
+        setTimeLeft({
+          days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
+          hours: String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0'),
+          minutes: String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0'),
+          seconds: String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, '0')
+        });
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#050505] font-sans pb-16 md:pb-24">
+      
+      {/* IMAGEN DE FONDO Y OVERLAYS */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1533137098665-47ca60257cec?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          alt="Escenario Expande" 
+          className="w-full h-full object-cover opacity-40 grayscale-30"
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-[#050505]/80 via-black/40 to-[#050505]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] opacity-80"></div>
+      </div>
+
+      {/* BARRA SUPERIOR MINIMALISTA */}
+      <div className="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-center z-20 text-[9px] md:text-xs text-gray-400 tracking-[0.2em] uppercase font-light sm:flex">
+        <span>Una experiencia de alto impacto</span>
+        <span>Colombia · 2026</span>
+      </div>
+
+      {/* CONTENIDO PRINCIPAL CENTRAL */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 text-center flex flex-col items-center mt-12 md:mt-0">
+        
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="mb-8">
+          <span className="bg-[#e6b981]/10 border border-[#e6b981]/30 text-[#e6b981] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-[0_0_15px_rgba(230,185,129,0.15)]">
+            2x1 Compra tu entrada antes que suba el precio
+          </span>
+        </motion.div>
+
+        <motion.h1 initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="font-['Oswald',sans-serif] text-7xl md:text-[130px] lg:text-[160px] leading-[0.85] font-bold text-[#f5f4f0] tracking-tighter mb-6 drop-shadow-2xl">
+          EXPANDE
+        </motion.h1>
+
+        <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }} className="text-xl md:text-3xl lg:text-4xl font-bold uppercase text-gray-200 tracking-tight max-w-4xl mx-auto mb-8 leading-snug drop-shadow-md">
+          Sabes que hay más disponible para ti.<br className="hidden md:block" /> 
+          La pregunta es: ¿Qué te está impidiendo vivirlo?
+        </motion.h2>
+
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.6 }} className="text-gray-400 text-sm md:text-base font-light max-w-2xl mx-auto mb-12 leading-relaxed border-t border-gray-800 pt-8">
+          Una inmersión de alto impacto de un día para reordenar tu mundo interno y expandir tus resultados externos en tus relaciones, dinero, propósito y vida.
+        </motion.p>
+
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
+          <a href="#entradas" className="inline-block bg-[#e6b981] hover:bg-white text-[#050505] font-extrabold uppercase tracking-[0.15em] px-10 md:px-14 py-4 md:py-5 rounded-md text-xs md:text-sm transition-all duration-300 shadow-[0_0_30px_rgba(230,185,129,0.2)] hover:shadow-[0_0_50px_rgba(230,185,129,0.4)] hover:-translate-y-1">
+            Quiero vivir expande →
+          </a>
+        </motion.div>
+        {/* Badges de Información Inferior */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="flex flex-wrap justify-center gap-3 md:gap-6 mt-10"
+        >
+          <div className="flex items-center gap-2 border border-gray-800 bg-[#0a0a0a]/50 backdrop-blur-sm rounded-full px-5 py-2 text-[10px] md:text-xs text-gray-400 font-medium tracking-wide">
+            <span className="text-[#e6b981]">29 NOV</span> · Paipa, Boyacá
           </div>
-
-          {/* HEADLINE */}
-          <h1 className="font-['Oswald',_sans-serif] text-[40px] md:text-6xl lg:text-[60px] font-bold uppercase leading-[1.12] tracking-tight mb-1 max-w-4xl mx-auto">
-            Tu 3x1 a los 2 días que valen <br />
-            <span className="bg-[linear-gradient(92deg,#F8CE5A,#F08000,#E0400A)] bg-clip-text text-transparent">
-              10 años
-            </span> está por cerrarse.
-          </h1>
-          
-          {/* SUBTITLE */}
-          <p className="text-[#b6aea6] text-sm md:text-base mb-6 mt-0 max-w-2xl mx-auto font-light">
-            Pagas 1, entran 3. Asegura los tres lugares antes de que la preventa suba a precio full.
-          </p>
-          
-          {/* BADGE 3X1 */}
-          <div className="inline-flex items-center gap-2 bg-[#121212] border border-gray-800 rounded-full px-4 py-1.5 text-xs md:text-sm mb-3 shadow-sm">
-            <span className="bg-[linear-gradient(92deg,#F08000,#F8CE5A,#E0400A)] bg-clip-text text-transparent font-bold">3X1</span> 
-            <span className="text-gray-500">·</span>
-            <span className="text-gray-300">pagas 1 entrada y <b>entran 3 personas</b></span>
+          <div className="flex items-center gap-2 border border-gray-800 bg-[#0a0a0a]/50 backdrop-blur-sm rounded-full px-5 py-2 text-[10px] md:text-xs text-gray-400 font-medium tracking-wide">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#e6b981]"></span>
+            Cupos limitados
           </div>
+        </motion.div>
+      </div>
 
-          {/* PLAY INSTRUCTIONS */}
-          <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-gray-300 mb-6 max-w-lg mx-auto text-center leading-snug">
-            {/* Ícono SVG en lugar de emoji para evitar problemas de renderizado */}
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 text-[#f04e23] mt-0.5">
-              <path d="M5 3l14 9-18 9V3z" />
-            </svg>
-            <p>
-              Súbele el volumen. Ya sabes de qué va esto —déjame mostrarte por qué este año es distinto.
-            </p>
+      {/* =========================================
+          NUEVA BARRA INFERIOR: CONTADOR Y FLECHA
+          ========================================= */}
+      <div className="absolute bottom-0 left-0 w-full border-t border-gray-800/80 px-6 md:px-12 py-5 flex justify-between items-center z-20 bg-linear-to-t from-[#050505] to-transparent">
+        
+        {/* Contador */}
+        <div className="flex flex-col">
+          <span className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-2 font-medium">
+            Comienza en
+          </span>
+          <div className="flex gap-4 md:gap-6 text-white font-['Oswald',sans-serif] text-base md:text-xl tracking-widest">
+            <div className="flex items-baseline gap-1.5"><span className="font-bold text-[#e6b981]">{timeLeft.days}</span><span className="text-[9px] md:text-[10px] text-gray-500 uppercase font-sans tracking-widest">Días</span></div>
+            <div className="flex items-baseline gap-1.5"><span className="font-bold text-[#e6b981]">{timeLeft.hours}</span><span className="text-[9px] md:text-[10px] text-gray-500 uppercase font-sans tracking-widest">Horas</span></div>
+            <div className="flex items-baseline gap-1.5"><span className="font-bold text-[#e6b981]">{timeLeft.minutes}</span><span className="text-[9px] md:text-[10px] text-gray-500 uppercase font-sans tracking-widest">Min</span></div>
+            <div className="flex items-baseline gap-1.5"><span className="font-bold text-[#e6b981]">{timeLeft.seconds}</span><span className="text-[9px] md:text-[10px] text-gray-500 uppercase font-sans tracking-widest">Seg</span></div>
           </div>
-
-          {/* VIDEO PLAYER REPLICA */}
-          {/* Usamos una imagen de Unsplash temporal de fondo y le ponemos un overlay rojizo */}
-          <div 
-            className="relative w-full max-w-4xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden bg-cover bg-center border border-gray-800 shadow-2xl flex flex-col items-center justify-center text-white"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')" }}
-          >
-            {/* Capa roja superpuesta simulando el diseño original */}
-            <div className="absolute inset-0 bg-[#8c2a2a]/85 backdrop-blur-[1px]"></div>
-            
-            {/* Contenido del reproductor sobre el video */}
-            <div className="relative z-10 flex flex-col items-center">
-              <h2 className="text-2xl md:text-[32px] font-bold mb-10">
-                Ya comenzaste a ver este video
-              </h2>
-              
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-14">
-                {/* Botón Seguir viendo */}
-                <button className="flex items-center gap-3 text-lg font-medium hover:text-gray-300 transition-colors group">
-                  <div className="w-12 h-12 rounded-full border-[1.5px] border-white flex items-center justify-center group-hover:border-gray-300 transition-colors">
-                    <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"/></svg>
-                  </div>
-                  Seguir viendo
-                </button>
-
-                {/* Botón Volver a empezar */}
-                <button className="flex items-center gap-3 text-lg font-medium hover:text-gray-300 transition-colors group">
-                  <div className="w-12 h-12 rounded-full border-[1.5px] border-white flex items-center justify-center group-hover:border-gray-300 transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-                  </div>
-                  Volver a empezar
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA BUTTON */}
-          <div className="mt-12 flex flex-col items-center">
-            <a 
-              href="#entradas" 
-              className="bg-gradient-to-r from-[#d96a11] to-[#f29124] hover:from-[#f29124] hover:to-[#d96a11] text-[#050505] font-extrabold uppercase tracking-wide px-8 md:px-14 py-4 md:py-5 rounded-full text-base md:text-lg transition-all duration-300 shadow-[0_0_40px_rgba(235,122,1,0.3)] hover:shadow-[0_0_60px_rgba(235,122,1,0.5)] hover:-translate-y-1 transform"
-            >
-              Quiero mi entrada a la cumbre →
-            </a>
-            
-            {/* TEXTO INFERIOR */}
-            <p className="text-gray-200 text-[11px] md:text-sm mt-4 text-center max-w-lg font-light leading-relaxed">
-              Pago seguro · plazas limitadas · el precio de preventa sube pronto. Elige tu <br className="hidden md:block" />
-              entrada aquí abajo.
-            </p>
-          </div>
-
         </div>
-      </FadeInSection>
+
+        {/* Botón Flecha Abajo */}
+        <a href="#experiencia" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#e6b981] hover:border-[#e6b981] transition-all duration-300">
+          <svg className="w-4 h-4 animate-bounce mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+      </div>
+
     </section>
   );
 }
