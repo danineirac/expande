@@ -36,9 +36,9 @@ export default function Hero() {
         <img 
           src="https://images.unsplash.com/photo-1533137098665-47ca60257cec?q=80&w=1740&auto=format&fit=crop" 
           alt="Escenario Expande" 
-          className="w-full h-full object-cover opacity-30 grayscale-[40%]"
+          className="w-full h-full object-cover opacity-30 grayscale-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/90 via-black/50 to-[#050505]"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#050505]/90 via-black/50 to-[#050505]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#050505_100%)] opacity-80"></div>
       </div>
 
@@ -80,7 +80,7 @@ export default function Hero() {
               <img 
                 src="./images/expande-1.webp" 
                 alt="Video Expande" 
-                className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale-[40%] group-hover:opacity-60 group-hover:scale-105 transition-all duration-1000"
+                className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-1000"
               />
               <div className="absolute inset-0 flex items-center justify-center z-10">
                 <div className="w-20 h-20 md:w-24 md:h-24 bg-[#050505]/80 backdrop-blur-md border border-[#e6b981]/40 rounded-full flex items-center justify-center text-[#e6b981] group-hover:scale-110 group-hover:bg-[#e6b981] group-hover:text-[#050505] transition-all duration-300 shadow-2xl">
@@ -138,7 +138,7 @@ export default function Hero() {
       {/* =========================================
           BARRA INFERIOR: CONTADOR Y FLECHA
           ========================================= */}
-      <div className="absolute bottom-0 left-0 w-full border-t border-gray-800/80 px-6 md:px-12 py-5 flex justify-between items-center z-20 bg-gradient-to-t from-[#050505] to-transparent">
+      <div className="absolute bottom-0 left-0 w-full border-t border-gray-800/80 px-6 md:px-12 py-5 flex justify-between items-center z-20 bg-linear-to-t from-[#050505] to-transparent">
         
         {/* Contador */}
         <div className="flex flex-col">

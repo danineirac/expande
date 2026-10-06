@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="relative bg-[#050505] text-white py-20 px-6 border-t border-gray-900 overflow-hidden font-sans">
       
       {/* Brillo sutil de fondo */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-t-full pointer-events-none"></div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-t-full pointer-events-none"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function Footer() {
             <p className="text-[#e6b981] uppercase tracking-[0.2em] text-[10px] font-bold">
               El Punto de Partida
             </p>
-            <p className="font-['Oswald',_sans-serif] text-xl md:text-2xl text-gray-200 leading-snug tracking-wide">
+            <p className="font-['Oswald',sans-serif] text-xl md:text-2xl text-gray-200 leading-snug tracking-wide">
               Tu vida no se expande <br/> hasta que tú te expandes.
             </p>
           </div>

@@ -8,7 +8,7 @@ export default function Inversion() {
         {/* ENCABEZADO */}
         <FadeInSection>
           <div className="text-center mb-16">
-            <h2 className="font-['Oswald',_sans-serif] text-4xl md:text-5xl font-bold uppercase tracking-tight text-white">
+            <h2 className="font-['Oswald',sans-serif] text-4xl md:text-5xl font-bold uppercase tracking-tight text-white">
               Entradas
             </h2>
           </div>
@@ -25,12 +25,12 @@ export default function Inversion() {
                 <span className="text-[10px] text-[#e6b981] font-semibold uppercase tracking-widest bg-[#e6b981]/10 border border-[#e6b981]/30 px-4 py-1.5 rounded-full inline-block mb-6">
                   2x1 · Plazas limitadas
                 </span>
-                <h3 className="font-['Oswald',_sans-serif] text-4xl font-bold uppercase tracking-tight text-white">
+                <h3 className="font-['Oswald',sans-serif] text-4xl font-bold uppercase tracking-tight text-white">
                   General
                 </h3>
               </div>
 
-              <div className="w-full aspect-[4/3] bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
                 <img 
                   src="/images/ent-general.webp" 
                   alt="Ubicación General" 
@@ -41,12 +41,12 @@ export default function Inversion() {
               <div className="text-center mb-8 pb-8 border-b border-gray-800/80">
                 <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento grande</p>
                 <div className="flex flex-col items-center justify-center gap-1">
-                  <p className="font-['Oswald',_sans-serif] text-5xl font-bold text-white">$200.000</p>
+                  <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white">$200.000</p>
                   <p className="text-sm text-gray-500 line-through">Luego sube a $350.000</p>
                 </div>
               </div>
               
-              <ul className="space-y-4 mb-10 text-sm text-gray-300 flex-grow">
+              <ul className="space-y-4 mb-10 text-sm text-gray-300 grow">
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Acceso presencial a todo el evento</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span><b>Entrada 2x1:</b> compra una y entra alguien gratis contigo</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Asiento en zona general</span></li>
@@ -79,12 +79,12 @@ export default function Inversion() {
               </div>
               
               <div className="text-center mb-6 mt-4">
-                <h3 className="font-['Oswald',_sans-serif] text-5xl font-bold uppercase tracking-tight text-[#e6b981] drop-shadow-md">
+                <h3 className="font-['Oswald',sans-serif] text-5xl font-bold uppercase tracking-tight text-[#e6b981] drop-shadow-md">
                   VIP
                 </h3>
               </div>
 
-              <div className="w-full aspect-[4/3] bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-[#e6b981]/30 group">
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-[#e6b981]/30 group">
                 <img 
                   src="/images/ent-vip.webp"  
                   alt="Ubicación VIP" 
@@ -95,12 +95,12 @@ export default function Inversion() {
               <div className="text-center mb-8 pb-8 border-b border-[#e6b981]/30">
                 <p className="text-[#e6b981]/80 text-xs uppercase tracking-widest mb-2">Precio de lanzamiento grande</p>
                 <div className="flex flex-col items-center justify-center gap-1">
-                  <p className="font-['Oswald',_sans-serif] text-5xl font-bold text-white drop-shadow-lg">$350.000</p>
+                  <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white drop-shadow-lg">$350.000</p>
                   <p className="text-sm text-[#e6b981]/60 line-through">Luego sube a $450.000</p>
                 </div>
               </div>
               
-              <ul className="space-y-4 mb-10 text-sm text-gray-200 flex-grow">
+              <ul className="space-y-4 mb-10 text-sm text-gray-200 grow">
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Acceso presencial a todo el evento</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span><b>Entrada 2x1:</b> compras una entrada y vas gratis con otra persona</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Ingreso privilegiado y zona VIP</span></li>
@@ -135,12 +135,12 @@ export default function Inversion() {
                 <span className="text-[10px] text-white font-semibold uppercase tracking-widest bg-red-900/50 border border-red-800/50 px-4 py-1.5 rounded-full inline-block mb-6">
                   Solo 15 cupos - no incluye 2x1
                 </span>
-                <h3 className="font-['Oswald',_sans-serif] text-4xl font-bold uppercase tracking-tight text-white">
+                <h3 className="font-['Oswald',sans-serif] text-4xl font-bold uppercase tracking-tight text-white">
                   Platino
                 </h3>
               </div>
 
-              <div className="w-full aspect-[4/3] bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
+              <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-gray-800/80 group">
                 <img 
                   src="/images/ent-platino.webp" 
                   alt="Ubicación Platino" 
@@ -151,12 +151,12 @@ export default function Inversion() {
               <div className="text-center mb-8 pb-8 border-b border-gray-800/80">
                 <p className="text-gray-400 text-xs uppercase tracking-widest mb-2">Precio lanzamiento grande</p>
                 <div className="flex flex-col items-center justify-center gap-1">
-                  <p className="font-['Oswald',_sans-serif] text-5xl font-bold text-white">$550.000</p>
+                  <p className="font-['Oswald',sans-serif] text-5xl font-bold text-white">$550.000</p>
                   <p className="text-sm text-gray-500 line-through">Luego $750.000</p>
                 </div>
               </div>
               
-              <div className="flex-grow">
+              <div className="grow">
                 <ul className="space-y-4 mb-8 text-sm text-gray-300">
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Zona preferencial plazas únicas una experiencia premium</span></li>
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Ingreso Privilegiado</span></li>
@@ -201,7 +201,7 @@ export default function Inversion() {
 }
 
 const IconCheckGold = () => (
-  <svg className="w-5 h-5 text-[#e6b981] flex-shrink-0 mt-0.5 drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+  <svg className="w-5 h-5 text-[#e6b981] shrink-0 mt-0.5 drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );
