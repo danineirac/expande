@@ -7,7 +7,7 @@ export default function Hero() {
   
   // Estado para el reproductor de video
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = "dQw4w9WgXcQ"; // Reemplaza con el ID real de YouTube
+  const videoId = "myRBvaNEzGc"; // Reemplaza con el ID real de YouTube
 
   useEffect(() => {
     const targetDate = new Date("2026-11-29T08:00:00").getTime();
@@ -60,9 +60,37 @@ export default function Hero() {
 
         {/* SUBTÍTULO */}
         <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }} className="text-lg md:text-2xl lg:text-3xl font-bold uppercase text-gray-200 tracking-tight max-w-4xl mx-auto mb-8 leading-snug drop-shadow-md">
-          Sabes que hay más disponible para ti <br className="hidden md:block" /> 
+          Sabes que hay más disponible para ti.<br className="hidden md:block" /> 
           La pregunta es: ¿Qué te está impidiendo vivirlo?
         </motion.h2>
+
+        {/* 👇 NUEVO TEXTO LLAMATIVO PARA EL VIDEO 👇 */}
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+          className="mb-6 flex justify-center w-full relative z-20"
+        >
+          <div className="flex items-center gap-3 text-[#e6b981] font-light uppercase tracking-[0.2em] text-[10px] md:text-s bg-[#e6b981]/10 border border-[#e6b981]/30 px-5 md:px-6 py-2.5 rounded-full shadow-[0_0_20px_rgba(230,185,129,0.15)] backdrop-blur-md -mb-3">
+            
+            {/* Punto parpadeante */}
+            <span className="relative flex h-2 w-2 md:h-2.5 md:w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e6b981] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 md:h-2.5 md:w-2.5 bg-[#e6b981]"></span>
+            </span>
+            
+            Reproduce el video y entenderás
+            
+            {/* Flecha rebotando hacia abajo */}
+            <svg className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#e6b981] animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            
+          </div>
+        </motion.div>
+        {/* 👆 FIN DEL NUEVO TEXTO 👆 */}
+
+        {/* REPRODUCTOR DE VIDEO INCORPORADO */}
 
         {/* REPRODUCTOR DE VIDEO INCORPORADO */}
         <motion.div 
