@@ -43,13 +43,13 @@ export default function Hero() {
       </div>
 
       {/* BARRA SUPERIOR MINIMALISTA */}
-      <div className="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-center z-20 text-[9px] md:text-xs text-gray-400 tracking-[0.2em] uppercase font-light sm:flex">
+      <div className="absolute top-0 left-0 w-full p-6 md:p-5 flex justify-between items-center z-20 text-[9px] md:text-xs text-gray-400 tracking-[0.2em] uppercase font-light sm:flex">
         <span>Una experiencia de alto impacto</span>
         <span>Colombia · 2026</span>
       </div>
 
       {/* CONTENIDO PRINCIPAL CENTRAL */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 text-center flex flex-col items-center mt-8 md:mt-0">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 text-center flex flex-col items-center mt-8 md:-mt-5">
         
         {/* ETIQUETA */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="mb-6 md:mb-8">
