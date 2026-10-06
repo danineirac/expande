@@ -10,7 +10,7 @@ export default function CierreCTA() {
       {/* Resplandor cálido central que cae desde arriba, ajustado al dorado de EXPANDE */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-125 bg-[#e6b981] opacity-[0.04] blur-[120px] rounded-full pointer-events-none"></div>
 
-      <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+      <div className="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center -mt-15">
         
         <FadeInSection>
           {/* TÍTULO PRINCIPAL */}
@@ -36,7 +36,7 @@ export default function CierreCTA() {
           {/* BOTÓN DE LLAMADO A LA ACCIÓN */}
           <a 
             href="#entradas" 
-            className="inline-block bg-[#e6b981] hover:bg-white text-[#050505] font-extrabold uppercase tracking-[0.15em] px-10 md:px-14 py-4 md:py-5 rounded-md text-xs md:text-sm transition-all duration-300 shadow-[0_0_30px_rgba(230,185,129,0.15)] hover:shadow-[0_0_50px_rgba(230,185,129,0.3)] hover:-translate-y-1 transform"
+            className="inline-block bg-[#ffa83b] hover:bg-white text-[#050505] font-extrabold uppercase tracking-[0.15em] px-10 md:px-14 py-4 md:py-5 rounded-md text-xs md:text-sm transition-all duration-300 shadow-[0_0_30px_rgba(230,185,129,0.15)] hover:shadow-[0_0_50px_rgba(230,185,129,0.3)] hover:-translate-y-1 transform"
           >
             Asegurar mi entrada →
           </a>

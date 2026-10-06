@@ -53,7 +53,7 @@ export default function Inversion() {
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Kit vivencial EXPANDE</span></li>
               </ul>
               
-              {/* CTA GENERAL -> WhatsApp de Santi */}
+              {/* CTA GENERAL */}
               <div className="mt-auto flex flex-col items-center w-full">
                 <a 
                   href="https://wa.me/573146936771?text=Hola,%20quiero%20asegurar%20mi%20entrada%20General%20para%20EXPANDE." 
@@ -86,7 +86,7 @@ export default function Inversion() {
 
               <div className="w-full aspect-4/3 bg-[#050505] rounded-xl mb-8 flex items-center justify-center overflow-hidden border border-[#e6b981]/30 group">
                 <img 
-                  src="/images/ent-vip.webp"  
+                  src="/images/ent-vip.webp" 
                   alt="Ubicación VIP" 
                   className="w-full h-full object-contain p-2 opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
                 />
@@ -106,17 +106,17 @@ export default function Inversion() {
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Ingreso privilegiado y zona VIP</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Escarapela VIP de identificación</span></li>
                 <li className="flex gap-3 items-start"><IconCheckGold /><span>Almuerzo</span></li>
-                <li className="flex gap-3 items-start"><IconCheckGold /><span>Kit vivencia EXPANDE</span></li>
-                <li className="flex gap-3 items-start"><IconCheckGold /><span>Recordatorio</span></li>
+                <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Kit vivencia EXPANDE</span></li>
+                <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Recordatorio</span></li>
               </ul>
               
               {/* CTA VIP -> Tu número (Cambia el 573000000000) */}
               <div className="mt-auto flex flex-col items-center w-full">
                 <a 
-                  href="https://wa.me/573214633040?text=Hola,%20quiero%20asegurar%20mi%20entrada%20VIP%20para%20EXPANDE." 
+                  href="https://wa.me/573000000000?text=Hola,%20quiero%20asegurar%20mi%20entrada%20VIP%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-full text-center bg-[#e6b981] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
+                  className="w-full text-center bg-[#ffa83b] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
                 >
                   Asegurar mi cupo
                 </a>
@@ -162,25 +162,25 @@ export default function Inversion() {
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Ingreso Privilegiado</span></li>
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Escarapela PLATINO de identificación</span></li>
                   <li className="flex gap-3 items-start"><IconCheckGold /><span>Almuerzo</span></li>
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Recordatorio</span></li>
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Kit Digital EXPANDE</span></li>
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Kit vivencial especial EXPANDE</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Recordatorio</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Kit Digital EXPANDE</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Kit vivencial especial EXPANDE</span></li>
                 </ul>
 
                 <h4 className="text-[11px] text-[#e6b981] font-bold uppercase tracking-widest mb-4 border-t border-gray-800/80 pt-6">
                   Post EXPANDE tienes acceso a:
                 </h4>
                 <ul className="space-y-4 mb-10 text-sm text-gray-300">
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Fullday profundo de Sanación (tu programas la fecha que más se te facilite)</span></li>
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Sesión 1:1 online con Danna Neira</span></li>
-                  <li className="flex gap-3 items-start"><IconCheckGold /><span>Experiencia privada el lunes 30</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Fullday profundo de Sanación (tu programas la fecha que más se te facilite)</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Sesión 1:1 online con Danna Neira</span></li>
+                  <li className="flex gap-3 items-start text-white font-medium"><IconStarGold /><span>Experiencia privada el lunes 30</span></li>
                 </ul>
               </div>
               
               {/* CTA PLATINO -> Tu número (Cambia el 573000000000) */}
               <div className="mt-auto flex flex-col items-center w-full">
                 <a 
-                  href="https://wa.me/573214633040?text=Hola,%20quiero%20asegurar%20mi%20entrada%20Platino%20para%20EXPANDE." 
+                  href="https://wa.me/573000000000?text=Hola,%20quiero%20asegurar%20mi%20entrada%20Platino%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-full text-center bg-transparent hover:bg-[#1a1a1a] border border-gray-700 hover:border-[#e6b981]/50 text-white font-bold py-4 rounded-md transition-all uppercase tracking-wide text-sm block"
@@ -203,5 +203,12 @@ export default function Inversion() {
 const IconCheckGold = () => (
   <svg className="w-5 h-5 text-[#e6b981] shrink-0 mt-0.5 drop-shadow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
+
+/* NUEVO ICONO: Estrella brillante e intensa para beneficios VIP */
+const IconStarGold = () => (
+  <svg className="w-5 h-5 text-[#ffd700] shrink-0 mt-0.5 drop-shadow-[0_0_6px_rgba(255,215,0,0.7)]" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
   </svg>
 );

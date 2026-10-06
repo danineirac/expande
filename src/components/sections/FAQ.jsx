@@ -45,12 +45,12 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-24 px-4 bg-[#050505] text-white font-sans">
+    <section className="py-24 px-4 bg-[#050505] text-white font-sans -mt-15">
       <div className="max-w-3xl mx-auto">
         
         {/* ENCABEZADO */}
         <FadeInSection>
-          <div className="mb-12 text-left">
+          <div className="mb-12 text-left -mt-15">
             <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm">
               Preguntas Frecuentes
             </span>

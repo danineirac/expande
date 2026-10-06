@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* SUBTÍTULO */}
         <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }} className="text-lg md:text-2xl lg:text-3xl font-bold uppercase text-gray-200 tracking-tight max-w-4xl mx-auto mb-8 leading-snug drop-shadow-md">
-          Sabes que hay más disponible para ti.<br className="hidden md:block" /> 
+          Sabes que hay más disponible para ti <br className="hidden md:block" /> 
           La pregunta es: ¿Qué te está impidiendo vivirlo?
         </motion.h2>
 

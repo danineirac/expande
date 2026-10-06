@@ -31,7 +31,7 @@ const testimoniosData = [
 
 export default function Testimonios() {
   return (
-    <section className="py-24 px-4 bg-[#050505] text-white font-sans border-t border-gray-900/50 relative overflow-hidden">
+    <section className="py-24 px-4 bg-[#050505] text-white font-sans border-t border-gray-900/50 relative overflow-hidden -mt-15">
       
       {/* Brillo de fondo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-full pointer-events-none"></div>
@@ -40,7 +40,7 @@ export default function Testimonios() {
         
         {/* ENCABEZADO */}
         <FadeInSection>
-          <div className="mb-16 text-center">
+          <div className="mb-16 text-center -mt-15 ">
             <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm block mb-4">
               Voces de Expansión
             </span>
@@ -50,12 +50,15 @@ export default function Testimonios() {
           </div>
         </FadeInSection>
 
-        {/* GRID DE VIDEOS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* CARRUSEL MÓVIL / GRID DE ESCRITORIO */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:pb-0 md:overflow-visible scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
           {testimoniosData.map((testimonio, index) => (
-            <FadeInSection delay={0.1 * index} key={testimonio.id}>
-              <VideoCard testimonio={testimonio} />
-            </FadeInSection>
+            // En móvil cada video ocupa el 85% del ancho (min-w-[85vw]) para que se vea un pedacito del siguiente y sepan que pueden deslizar.
+            <div key={testimonio.id} className="min-w-[85vw] sm:min-w-[60vw] snap-center shrink-0 md:min-w-0 md:w-auto md:shrink">
+              <FadeInSection delay={0.1 * index}>
+                <VideoCard testimonio={testimonio} />
+              </FadeInSection>
+            </div>
           ))}
         </div>
 
@@ -71,7 +74,7 @@ const VideoCard = ({ testimonio }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="flex flex-col group">
+    <div className="flex flex-col group h-full">
       <div className="relative w-full aspect-9/16 bg-[#0a0a0a] rounded-2xl overflow-hidden border border-gray-800 shadow-lg mb-4">
         
         {!isPlaying ? (
@@ -81,10 +84,10 @@ const VideoCard = ({ testimonio }) => {
           >
             <img 
               src={testimonio.portada} 
-              alt={`Testimonio ${testimonio.nombre}`} 
+              alt={`Testimonio ${testimonio.nombre || 'EXPANDE'}`} 
               className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale-20 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 bg-gray-900"
               onError={(e) => {
-                e.target.onerror = null; // <--- ESTO PREVIENE EL BUCLE INFINITO
+                e.target.onerror = null; 
                 e.target.src = "https://images.unsplash.com/photo-1540039155732-680874b8344e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"; 
               }}
             />
@@ -103,7 +106,7 @@ const VideoCard = ({ testimonio }) => {
           <iframe
             className="absolute inset-0 w-full h-full"
             src={`https://www.youtube.com/embed/${testimonio.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
-            title={`Testimonio ${testimonio.nombre}`}
+            title={`Testimonio ${testimonio.nombre || 'EXPANDE'}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -111,10 +114,12 @@ const VideoCard = ({ testimonio }) => {
         )}
       </div>
 
-      <div className="px-2">
-        <h4 className="font-['Oswald',sans-serif] text-xl font-bold uppercase tracking-tight text-white mb-1">
-          {testimonio.nombre}
-        </h4>
+      <div className="px-2 mt-auto">
+        {testimonio.nombre && (
+          <h4 className="font-['Oswald',sans-serif] text-xl font-bold uppercase tracking-tight text-white mb-1">
+            {testimonio.nombre}
+          </h4>
+        )}
         <p className="text-[#e6b981] text-xs uppercase tracking-widest font-medium">
           {testimonio.descripcion}
         </p>
@@ -122,4 +127,3 @@ const VideoCard = ({ testimonio }) => {
     </div>
   );
 };
-  

@@ -22,13 +22,13 @@ export default function Conferencistas() {
   }, []);
 
   return (
-    <section className="py-24 md:py-32 px-4 bg-[#050505] text-white font-sans relative overflow-hidden border-t border-gray-900/50">
+    <section className="py-24 md:py-32 px-4 bg-[#050505] text-white font-sans relative overflow-hidden border-t border-gray-900/50 -mt-15">
       
       {/* Brillo de fondo sutil */}
       <div className="absolute top-0 right-0 w-150 h-150 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-150 h-150 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-full pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto -mt-15">
         
         {/* ENCABEZADO */}
         <FadeInSection>

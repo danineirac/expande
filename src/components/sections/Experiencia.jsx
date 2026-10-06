@@ -29,12 +29,12 @@ export default function Experiencia() {
   ];
 
   return (
-    <section className="bg-[#050505] py-24 px-4 font-sans relative">
+    <section className="bg-[#050505] py-24 px-4 font-sans relative -mt-15">
       <div className="max-w-6xl mx-auto">
         
         <FadeInSection>
           <div className="text-center mb-16">
-            <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm block mb-4">
+            <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm block mb-4 -mt-15">
               Eleva tu conciencia, transforma tu realidad
             </span>
             <h2 className="font-['Oswald',sans-serif] text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white">
@@ -159,7 +159,7 @@ export default function Experiencia() {
               Detrás de aquello que llevas <br className="hidden md:block"/> tiempo evitando <br className="hidden md:block"/> 
               <span className="text-[#e6b981]">puede estar el siguiente nivel <br className="hidden md:block"/> que llevas tiempo buscando.</span>
             </h4>
-            <p className="text-gray-500 text-xs md:text-sm font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-500 text-xs md:text-sm font-light max-w-2xl mx-auto leading-relaxed -mb-15">
               EXPANDE fue creado para ayudarte a mirar aquello que hoy no estás viendo, hacer espacio y empezar a construir desde una versión diferente de ti.
             </p>
           </div>

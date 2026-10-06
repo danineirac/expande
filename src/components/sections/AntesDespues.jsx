@@ -26,14 +26,14 @@ export default function AntesDespues() {
   ];
 
   return (
-    <section className="bg-[#050505] py-24 px-4 font-sans relative">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-[#050505] py-24 px-4 font-sans relative -mt-15">
+      <div className="max-w-6xl mx-auto -mt-15">
         
         {/* =========================================
             ENCABEZADO Y TEXTO INTRODUCTORIO
             ========================================= */}
         <FadeInSection>
-          <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-16 ">
             <h2 className="font-['Oswald',sans-serif] text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter mb-6">
               Antes y Después
             </h2>
@@ -53,7 +53,7 @@ export default function AntesDespues() {
             <div className="bg-[#0a0a0a] border border-gray-800/60 rounded-xl p-8 md:p-12 h-full flex flex-col hover:border-gray-700 transition-colors">
               <div className="mb-10">
                 <p className="text-gray-600 text-[9px] md:text-[10px] uppercase tracking-[0.2em] mb-3">
-                  ANTES · EL PATRÓN CONOCIDO
+                  ANTES · DE VIVIR EXPANDE
                 </p>
                 <h3 className="font-['Oswald',sans-serif] text-3xl md:text-4xl font-bold text-gray-200 uppercase tracking-tight">
                   Vivir desde la repetición
@@ -79,7 +79,7 @@ export default function AntesDespues() {
             <div className="bg-[#0a0a0a] border border-[#e6b981]/30 rounded-xl p-8 md:p-12 h-full flex flex-col shadow-[0_0_40px_rgba(230,185,129,0.05)] hover:shadow-[0_0_50px_rgba(230,185,129,0.1)] transition-all">
               <div className="mb-10">
                 <p className="text-[#e6b981]/70 text-[9px] md:text-[10px] uppercase tracking-[0.2em] mb-3">
-                  DESPUÉS · UNA NUEVA POSICIÓN
+                  DESPUÉS · DE VIVIR EXPANDE
                 </p>
                 <h3 className="font-['Oswald',sans-serif] text-3xl md:text-4xl font-bold text-white uppercase tracking-tight">
                   Crear desde la elección

@@ -2,7 +2,7 @@ import FadeInSection from "../ui/FadeInSection";
 
 export default function Ubicacion() {
   return (
-    <section className="py-24 px-4 bg-[#050505] text-white font-sans">
+    <section className="py-24 px-4 bg-[#050505] text-white font-sans -mt-15">
       <div className="max-w-5xl mx-auto">
         
         {/* ENCABEZADO */}
