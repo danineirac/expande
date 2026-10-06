@@ -112,7 +112,7 @@ export default function Hero() {
               href="https://wa.me/573146936771?text=Hola,%20quiero%20separar%20mi%20entrada%20para%20EXPANDE." 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-[#e6b981] hover:bg-white text-[#050505] font-extrabold uppercase tracking-[0.15em] px-10 md:px-14 py-4 md:py-5 rounded-md text-xs md:text-sm transition-all duration-300 shadow-[0_0_30px_rgba(230,185,129,0.2)] hover:shadow-[0_0_50px_rgba(230,185,129,0.4)] hover:-translate-y-1 text-center"
+              className="inline-block bg-[#ffa83b] hover:bg-white text-[#050505] font-extrabold uppercase tracking-[0.15em] px-10 md:px-14 py-4 md:py-5 rounded-md text-xs md:text-sm transition-all duration-300 shadow-[0_0_30px_rgba(230,185,129,0.2)] hover:shadow-[0_0_50px_rgba(230,185,129,0.4)] hover:-translate-y-1 text-center"
             >
               Separar mi entrada
             </a>
