@@ -1,12 +1,11 @@
 import { useState } from "react";
 import FadeInSection from "../ui/FadeInSection";
 
-// Aquí pondrás los IDs de los videos de YouTube y las rutas de las imágenes de portada
 const testimoniosData = [
   {
     id: "1",
-    youtubeId: "muJHc6cwUik", // Cambia esto por el ID real de YouTube
-    portada: "/images/test-2.jpeg", // La foto que subas a public/images/
+    youtubeId: "muJHc6cwUik", 
+    portada: "/images/test-2.jpeg", 
     descripcion: "Asistente Mujer Origen 2025"
   },
   {
@@ -33,14 +32,12 @@ export default function Testimonios() {
   return (
     <section className="py-24 px-4 bg-[#050505] text-white font-sans border-t border-gray-900/50 relative overflow-hidden -mt-15">
       
-      {/* Brillo de fondo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* ENCABEZADO */}
         <FadeInSection>
-          <div className="mb-16 text-center -mt-15 ">
+          <div className="mb-12 text-center -mt-15">
             <span className="text-[#e6b981] font-bold tracking-[0.2em] uppercase text-xs md:text-sm block mb-4">
               Voces de Expansión
             </span>
@@ -51,10 +48,11 @@ export default function Testimonios() {
         </FadeInSection>
 
         {/* CARRUSEL MÓVIL / GRID DE ESCRITORIO */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:pb-0 md:overflow-visible scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
+        {/* Cambiamos gap-6 a gap-4 en móvil para que estén más juntitos */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:pb-0 md:overflow-visible scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] scrollbar-none">
           {testimoniosData.map((testimonio, index) => (
-            // En móvil cada video ocupa el 85% del ancho (min-w-[85vw]) para que se vea un pedacito del siguiente y sepan que pueden deslizar.
-            <div key={testimonio.id} className="min-w-[85vw] sm:min-w-[60vw] snap-center shrink-0 md:min-w-0 md:w-auto md:shrink">
+            // Cambiamos min-w-[85vw] a min-w-[65vw] para que los videos sean más angostos en celular
+            <div key={testimonio.id} className="min-w-[65vw] sm:min-w-[45vw] snap-center shrink-0 md:min-w-0 md:w-auto md:shrink">
               <FadeInSection delay={0.1 * index}>
                 <VideoCard testimonio={testimonio} />
               </FadeInSection>
@@ -67,9 +65,6 @@ export default function Testimonios() {
   );
 }
 
-/* =========================================
-   COMPONENTE HIJO: TARJETA DE VIDEO INDIVIDUAL
-   ========================================= */
 const VideoCard = ({ testimonio }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -93,8 +88,8 @@ const VideoCard = ({ testimonio }) => {
             />
             
             <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="w-16 h-16 bg-[#050505]/70 backdrop-blur-sm border border-[#e6b981]/50 rounded-full flex items-center justify-center text-[#e6b981] group-hover:scale-110 group-hover:bg-[#e6b981] group-hover:text-[#050505] transition-all duration-300 shadow-xl">
-                <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-[#050505]/70 backdrop-blur-sm border border-[#e6b981]/50 rounded-full flex items-center justify-center text-[#e6b981] group-hover:scale-110 group-hover:bg-[#e6b981] group-hover:text-[#050505] transition-all duration-300 shadow-xl">
+                <svg className="w-5 h-5 md:w-6 md:h-6 ml-1" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M4 4l12 6-12 6z" />
                 </svg>
               </div>
@@ -116,11 +111,11 @@ const VideoCard = ({ testimonio }) => {
 
       <div className="px-2 mt-auto">
         {testimonio.nombre && (
-          <h4 className="font-['Oswald',sans-serif] text-xl font-bold uppercase tracking-tight text-white mb-1">
+          <h4 className="font-['Oswald',sans-serif] text-lg md:text-xl font-bold uppercase tracking-tight text-white mb-1">
             {testimonio.nombre}
           </h4>
         )}
-        <p className="text-[#e6b981] text-xs uppercase tracking-widest font-medium">
+        <p className="text-[#e6b981] text-[10px] md:text-xs uppercase tracking-widest font-medium">
           {testimonio.descripcion}
         </p>
       </div>
