@@ -80,7 +80,7 @@ export default function Testimonios() {
               {/* Pantallazo 1 */}
               <div className="w-full max-w-[320px] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e6b981]/50 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(230,185,129,0.15)] hover:-translate-y-2 transition-all duration-500 bg-[#0a0a0a]">
                 <img 
-                  src="/public/images/test-wa-1.webp" 
+                  src="images/test-wa-1.webp" 
                   alt="Testimonio escrito 1" 
                   className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-lighten" 
                 />
@@ -89,7 +89,7 @@ export default function Testimonios() {
               {/* Pantallazo 2 (Ligeramente desfasado hacia abajo en PC para un look más moderno) */}
               <div className="w-full max-w-[320px] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e6b981]/50 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(230,185,129,0.15)] hover:-translate-y-2 transition-all duration-500 bg-[#0a0a0a] md:mt-16">
                 <img 
-                  src="/public/images/test-wa-2.webp" 
+                  src="images/test-wa-2.webp" 
                   alt="Testimonio escrito 2" 
                   className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-lighten" 
                 />
