@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#050505] font-sans pb-24 md:pb-32 pt-20">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#050505] font-sans pb-24 md:pb-32 pt-10 md:pt-20">
       
       {/* IMAGEN DE FONDO Y OVERLAYS */}
       <div className="absolute inset-0 z-0">
@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       {/* BARRA SUPERIOR MINIMALISTA */}
-      <div className="absolute top-0 left-0 w-full p-6 md:p-5 flex justify-between items-center z-20 text-[9px] md:text-xs text-gray-400 tracking-[0.2em] uppercase font-light sm:flex">
+      <div className="absolute top-0 left-0 w-full p-6 md:p-5 flex justify-between items-center z-20 text-[9px] md:text-xs text-gray-400 tracking-[0.2em] uppercase font-light sm:flex ">
         <span>Una experiencia de alto impacto</span>
         <span>Colombia · 2026</span>
       </div>
@@ -52,7 +52,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 text-center flex flex-col items-center mt-8 md:-mt-5">
         
         {/* ETIQUETA */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="mb-6 md:mb-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }} className="mb-4 md:mb-4">
           <span className="bg-[#e6b981]/10 border border-[#e6b981]/30 text-[#e6b981] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full text-[10px] md:text-xs shadow-[0_0_15px_rgba(230,185,129,0.15)]">
             2x1 Compra tu entrada antes que suba el precio
           </span>
@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* SUBTÍTULO */}
         <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }} className="text-lg md:text-2xl lg:text-3xl font-bold uppercase text-gray-200 tracking-tight max-w-4xl mx-auto mb-8 leading-snug drop-shadow-md">
-          Sabes que hay más disponible para ti.<br className="hidden md:block" /> 
+          Sabes que hay más disponible para ti <br className="hidden md:block" /> 
           La pregunta es: ¿Qué te está impidiendo vivirlo?
         </motion.h2>
 
