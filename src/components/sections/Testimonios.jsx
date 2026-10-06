@@ -60,6 +60,44 @@ export default function Testimonios() {
           ))}
         </div>
 
+        {/* =========================================
+            SECCIÓN PANTALLAZOS WHATSAPP
+            ========================================= */}
+        <FadeInSection delay={0.4}>
+          <div className="mt-10 border-t border-gray-800/60 pt-16">
+            
+            <div className="text-center mb-12">
+              <h3 className="font-['Oswald',sans-serif] text-2xl md:text-3xl font-bold uppercase tracking-tight text-white -mt-10">
+                Impacto <span className="text-[#e6b981]">Real</span>
+              </h3>
+              <p className="text-gray-500 text-xs md:text-sm mt-3 font-light tracking-wide uppercase">
+                Mensajes de quienes ya vivieron la experiencia
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 max-w-4xl mx-auto px-4 -mt-15">
+              
+              {/* Pantallazo 1 */}
+              <div className="w-full max-w-[320px] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e6b981]/50 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(230,185,129,0.15)] hover:-translate-y-2 transition-all duration-500 bg-[#0a0a0a]">
+                <img 
+                  src="/public/images/wa-1.jpg" 
+                  alt="Testimonio escrito 1" 
+                  className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-lighten" 
+                />
+              </div>
+
+              {/* Pantallazo 2 (Ligeramente desfasado hacia abajo en PC para un look más moderno) */}
+              <div className="w-full max-w-[320px] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#e6b981]/50 shadow-[0_0_30px_rgba(0,0,0,0.5)] hover:shadow-[0_0_40px_rgba(230,185,129,0.15)] hover:-translate-y-2 transition-all duration-500 bg-[#0a0a0a] md:mt-16">
+                <img 
+                  src="/public/images/wa-2.jpg" 
+                  alt="Testimonio escrito 2" 
+                  className="w-full h-auto opacity-80 hover:opacity-100 transition-opacity duration-300 mix-blend-lighten" 
+                />
+              </div>
+
+            </div>
+          </div>
+        </FadeInSection>
       </div>
     </section>
   );
