@@ -6,19 +6,19 @@ const testimoniosData = [
     id: "1",
     youtubeId: "muJHc6cwUik", 
     portada: "/images/test-2.jpeg", 
-    descripcion: "Asistente Mujer Origen 2025"
+    descripcion: "Asistente Mujer Origen 2026"
   },
   {
     id: "2",
     youtubeId: "MU-wp4EXxXQ", 
     portada: "/images/test-1.jpeg",
-    descripcion: "Asistente Mujer Origen 2025"
+    descripcion: "Asistente Mujer Origen 2026"
   },
   {
     id: "3",
     youtubeId: "erTAYvLkHbY", 
     portada: "/images/test-3.jpeg",
-    descripcion: "Asistente Mujer Origen 2025"
+    descripcion: "Asistente Mujer Origen 2026"
   },
   {
     id: "4",

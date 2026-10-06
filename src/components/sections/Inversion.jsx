@@ -59,7 +59,7 @@ export default function Inversion() {
                   href="https://wa.me/573146936771?text=Hola,%20quiero%20asegurar%20mi%20entrada%20General%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-full text-center bg-[#1a1a1a] hover:bg-white hover:text-black border border-gray-700 text-white font-bold py-4 rounded-md transition-all duration-300 uppercase tracking-wide text-sm block"
+                  className="w-full text-center bg-[#ffa83b] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
                 >
                   Asegurar mi cupo
                 </a>
@@ -183,7 +183,7 @@ export default function Inversion() {
                   href="https://wa.me/573000000000?text=Hola,%20quiero%20asegurar%20mi%20entrada%20Platino%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-full text-center bg-transparent hover:bg-[#1a1a1a] border border-gray-700 hover:border-[#e6b981]/50 text-white font-bold py-4 rounded-md transition-all uppercase tracking-wide text-sm block"
+                  className="w-full text-center bg-[#ffa83b] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
                 >
                   Asegurar mi cupo
                 </a>
