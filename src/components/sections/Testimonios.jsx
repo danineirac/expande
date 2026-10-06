@@ -5,23 +5,26 @@ import FadeInSection from "../ui/FadeInSection";
 const testimoniosData = [
   {
     id: "1",
-    youtubeId: "dQw4w9WgXcQ", // Cambia esto por el ID real de YouTube
-    portada: "/images/test-1.jpeg", // La foto que subas a public/images/
-    nombre: "Nombre Apellido",
-    descripcion: "Asistente Cumbre 2025"
+    youtubeId: "muJHc6cwUik", // Cambia esto por el ID real de YouTube
+    portada: "/images/test-2.jpeg", // La foto que subas a public/images/
+    descripcion: "Asistente Mujer Origen 2025"
   },
   {
     id: "2",
-    youtubeId: "dQw4w9WgXcQ", 
+    youtubeId: "MU-wp4EXxXQ", 
     portada: "/images/test-1.jpeg",
-    nombre: "Nombre Apellido",
-    descripcion: "Asistente Cumbre 2025"
+    descripcion: "Asistente Mujer Origen 2025"
   },
   {
     id: "3",
-    youtubeId: "dQw4w9WgXcQ", 
-    portada: "/images/test-1.jpeg",
-    nombre: "Nombre Apellido",
+    youtubeId: "erTAYvLkHbY", 
+    portada: "/images/test-3.jpeg",
+    descripcion: "Asistente Mujer Origen 2025"
+  },
+  {
+    id: "4",
+    youtubeId: "3GmnswFO19I", 
+    portada: "/images/test-4.jpeg",
     descripcion: "Asistente Cumbre 2025"
   }
 ];
@@ -33,7 +36,7 @@ export default function Testimonios() {
       {/* Brillo de fondo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-[#e6b981] opacity-[0.02] blur-[150px] rounded-full pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         
         {/* ENCABEZADO */}
         <FadeInSection>
@@ -48,7 +51,7 @@ export default function Testimonios() {
         </FadeInSection>
 
         {/* GRID DE VIDEOS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimoniosData.map((testimonio, index) => (
             <FadeInSection delay={0.1 * index} key={testimonio.id}>
               <VideoCard testimonio={testimonio} />

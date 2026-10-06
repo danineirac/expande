@@ -17,7 +17,6 @@ export default function Home() {
     <div className="font-sans selection:bg-orange-500 selection:text-white bg-slate-950 min-h-screen">
       <Hero />
       <Maarque />
-      <VideoSection />
       <Prueba />
       <Testimonios />
       <AntesDespues />
