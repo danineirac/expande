@@ -113,7 +113,7 @@ export default function Inversion() {
               {/* CTA VIP -> Tu número (Cambia el 573000000000) */}
               <div className="mt-auto flex flex-col items-center w-full">
                 <a 
-                  href="https://wa.me/573000000000?text=Hola,%20quiero%20asegurar%20mi%20entrada%20VIP%20para%20EXPANDE." 
+                  href="https://wa.me/573214633040?text=Hola,%20quiero%20asegurar%20mi%20entrada%20VIP%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-full text-center bg-[#ffa83b] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
@@ -177,10 +177,10 @@ export default function Inversion() {
                 </ul>
               </div>
               
-              {/* CTA PLATINO -> Tu número (Cambia el 573000000000) */}
+              {/* CTA PLATINO -> Tu número (Cambia el 573214633040) */}
               <div className="mt-auto flex flex-col items-center w-full">
                 <a 
-                  href="https://wa.me/573000000000?text=Hola,%20quiero%20asegurar%20mi%20entrada%20Platino%20para%20EXPANDE." 
+                  href="https://wa.me/573214633040?text=Hola,%20quiero%20asegurar%20mi%20entrada%20Platino%20para%20EXPANDE." 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-full text-center bg-[#ffa83b] hover:bg-white text-black font-extrabold py-4 rounded-md transition-all shadow-[0_0_20px_rgba(230,185,129,0.3)] uppercase tracking-wide text-sm transform hover:-translate-y-1 block"
